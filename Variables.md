@@ -86,3 +86,35 @@ echo "Quoted Values ($@values): $@"
 echo "Quoted Values ($*Values): $*"
 echo "Total Number of Parameters ($#values): $#"
 ```
+
+listing the command line argument using loop 
+```sh
+#!/bin/sh
+for varToken in $*
+  do 
+   echo "listing the values $varToken"
+done 
+```
+
+## Array varaiable 
+
+listing the values in array formate
+
+variable_array_name[index]=value
+
+
+echo "First Index: ${variable_array_name[0]}"
+echo "Second Index: ${variable_array_name[1]}"
+echo "listing the variable values ${variable_array_name[*]}"
+echo "listing the variable values ${variable_array_name[@]}"
+
+```sh
+#!/bin/sh
+
+myname[0]="test1"
+myname[1]="test2"
+myname[2]="test3"
+myname[3]="test4"
+echo "* Method: ${myname[*]}"
+echo "@ Method: ${myname[@]}"
+```
